@@ -1,0 +1,23 @@
+module.exports = {
+  JWT_SECRET:
+    process.env.JWT_SECRET ||
+    'THIS IS USED TO SIGN AND VERIFY JWT TOKENS FOR ROYALTY',
+  AWS: {
+    AWS_ACCESS_KEY: process.env.AWS_ACCESS_KEY,
+    AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
+    AWS_S3_BUCKET_NAME: process.env.AWS_S3_BUCKET_NAME,
+    AWS_ACCESS_KEY1: process.env.AWS_ACCESS_KEY1,
+    AWS_SECRET_ACCESS_KEY1: process.env.AWS_SECRET_ACCESS_KEY1,
+    AWS_S3_REGION: process.env.AWS_S3_REGION,
+    AWS_SES_REGION: process.env.AWS_SES_REGION,
+    AWS_SNS_REGION: process.env.AWS_SNS_REGION,
+  },
+  PHAXIO: {
+    PHAXIO_API_KEY: process.env.PHAXIO_API_KEY,
+    PHAXIO_API_SECRET: process.env.PHAXIO_API_SECRET,
+  },
+  TWILIO: {
+    TWILIO_ACCOUNT_SID: process.env.TWILIO_ACCOUNT_SID,
+    TWILIO_AUTH_TOKEN: process.env.TWILIO_AUTH_TOKEN,
+  },
+};

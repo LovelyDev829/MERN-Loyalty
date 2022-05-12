@@ -1,0 +1,74 @@
+{
+  "name": "decon_backend",
+  "version": "1.0.0",
+  "description": "Loyalty backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "cronjob": "node ./bin/cronjob.js",
+    "test-dev": "jest",
+    "lint": "eslint '*.js' --quiet --fix",
+    "format": "prettier '*.js' --write",
+    "lint-fix": "bash fixTab.sh && eslint config controllers models routes --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "loyalty",
+    "backend"
+  ],
+  "author": "superwebtop",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.939.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "generate-password": "^1.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.19",
+    "mailcomposer": "^4.0.2",
+    "mime-types": "^2.1.31",
+    "moment-timezone": "^0.5.32",
+    "mongoose": "^5.13.5",
+    "mongoose-double": "0.0.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "path": "^0.12.7",
+    "phaxio": "^1.0.0",
+    "prettier": "^2.0.5",
+    "randomstring": "^1.1.5",
+    "twilio": "^3.67.1",
+    "uuid": "^8.2.0"
+  },
+  "engines": {
+    "node": "=12.13.1",
+    "npm": "=6.12.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.7"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint",
+      "npm run format",
+      "git add",
+      "eslint --cache --fix"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"_id":{"$oid":"61b97b062383ad558db242c2"},"del":false,"email":"admin@gmail.com","firstName":"admin","isActive":true,"isReportsAccess":true,"lastName":"admin","phone":"41234123423","role":"admin","avatar":"","updatedAt":{"$date":"2021-12-15T07:18:26.653Z"}}
